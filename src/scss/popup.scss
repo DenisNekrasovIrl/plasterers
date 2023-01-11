@@ -1,0 +1,97 @@
+@import "mixins";
+
+.popup {
+  position: fixed;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.5s;
+  top: 0;
+  left: 0;
+}
+
+.popup-active {
+  opacity: 1;
+}
+
+.popup__body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+}
+
+.popup__content {
+  background: #ffffff;
+  border-radius: 30px;
+  @include adaptiv-value("padding-top", 60, 40, 1);
+  @include adaptiv-value("padding-bottom", 60, 40, 1);
+  @include adaptiv-value("padding-left", 40, 20, 1);
+  @include adaptiv-value("padding-right", 40, 20, 1);
+  width: 100%;
+  max-width: 545px;
+  position: relative;
+  height: max-content;
+  text-align: center;
+}
+
+.popup__close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  cursor: pointer;
+}
+
+.popup__title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  color: #333333;
+  margin-bottom: 15px;
+}
+
+.popup__text {
+  color: #4f4f4f;
+  margin-bottom: 30px;
+}
+
+.popup__input {
+  @include adaptiv-value("width", 445, 250, 1);
+  text-align: center;
+  margin: 0px 0px 15px 0px !important;
+  max-width: 445px !important;
+  width: 100% !important;
+}
+
+.popup__btn {
+  width: 100%;
+  max-width: 445px;
+  margin-top: 15px;
+  display: block;
+}
+
+.popup__personal {
+  margin-top: 15px;
+}
+
+.thanks-title {
+  padding-top: 63px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/icons/check.svg");
+    width: 45px;
+    height: 34px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+}
