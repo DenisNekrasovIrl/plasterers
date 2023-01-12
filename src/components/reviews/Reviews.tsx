@@ -41,7 +41,7 @@ export default function Reviews<T extends React.FC>(): React.ReactElement {
     },
   ];
   const settingsSlider: ISlider = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
@@ -64,7 +64,6 @@ export default function Reviews<T extends React.FC>(): React.ReactElement {
           slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
-          dots: false,
         },
       },
       {
@@ -73,7 +72,6 @@ export default function Reviews<T extends React.FC>(): React.ReactElement {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          dots: false,
         },
       },
     ],
