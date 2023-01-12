@@ -146,9 +146,15 @@
     background-color: #fff;
   }
 
-  .examples .swiper-button-nextt,
+  .examples .swiper-button-nextt {
+    right: 25%;
+    top: 100%;
+    bottom: 70px;
+  }
   .examples .swiper-button-prevv {
-    display: none;
+    left: 25%;
+    top: 100%;
+    bottom: 70px;
   }
 }
 
@@ -173,10 +179,5 @@
 
   .banner__price {
     margin: 0 auto 30px;
-  }
-
-  .examples .swiper-button-prevv,
-  .examples .swiper-button-nextt {
-    display: none;
   }
 }

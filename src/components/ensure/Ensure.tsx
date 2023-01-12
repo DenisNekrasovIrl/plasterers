@@ -26,7 +26,7 @@ export default function Ensure<T extends React.FC>(): React.ReactElement {
               <Select
                 value={select}
                 onChange={(e) => setSelect(Number(e.target.value))}
-                className="ensure__select select"
+                className="ensure__select select ensure__input-height"
               >
                 <MenuItem selected disabled value={1}>
                   Вид работы, который интересует
@@ -40,7 +40,7 @@ export default function Ensure<T extends React.FC>(): React.ReactElement {
             </FormControl>
             <input
               type="tel"
-              className="ensure__input"
+              className="ensure__input ensure__input-height"
               placeholder="+7 (___) ___-__-__"
             />
             <button

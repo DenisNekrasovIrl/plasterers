@@ -23,7 +23,7 @@ const Header: React.FC = function () {
             <button
               onClick={() => setShowMenu(!showMenu)}
               type="button"
-              className="menu__icon icon-menu"
+              className={`menu__icon icon-menu ${showMenu && "active"}`}
             >
               <span></span>
               <span></span>

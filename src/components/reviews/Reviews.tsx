@@ -56,7 +56,6 @@ export default function Reviews<T extends React.FC>(): React.ReactElement {
           slidesToShow: 3,
           slidesToScroll: 2,
           infinite: true,
-          dots: false,
         },
       },
       {

@@ -639,8 +639,6 @@ $fontFamily: "Montserrat";
 
 // .block-tabs.active
 
-
-
 //.block-tabs
 
 .block-tabs {
@@ -1505,7 +1503,9 @@ $fontFamily: "Montserrat";
   @include adaptiv-value("padding-top", 76, 60, 1);
 
   // .reviews__title
-
+&__img img{
+  border-radius: 15px;
+}
   &__title {
     @include adaptiv-value("margin-bottom", 40, 30, 1);
   }
@@ -1536,6 +1536,7 @@ $fontFamily: "Montserrat";
     width: 277px;
     height: 500px;
     margin: 0 auto;
+    border-radius: 15px;
   }
 
   // .reviews__link
@@ -1608,7 +1609,12 @@ $fontFamily: "Montserrat";
     border-radius: 16px;
   }
 }
-
+.fancybox img {
+  border-radius: 15px;
+}
+.fancybox__thumbs, .fancybox__nav{
+  display: none;
+}
 // .examples
 
 .examples {
@@ -1899,7 +1905,9 @@ $fontFamily: "Montserrat";
     pointer-events: none;
   }
   //.ensure__body
-
+  &__input-height{
+    height: 60px;
+  }
   &__body {
     position: relative;
     background: #fff7f3;
