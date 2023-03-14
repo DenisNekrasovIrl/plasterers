@@ -37,12 +37,10 @@ export default function Main() {
       // eslint-disable-next-line no-undef
       Ya.adfoxCode.create({
         ownerId: 1457688,
-        containerId: "adfox_167879288494153916",
+        containerId: "adfox_167878748592424766",
         params: {
-          p1: "cxoxz",
-          p2: "idcr",
-          pfc: "fajxl",
-          pfb: "nxcvv",
+          p1: "cxouk",
+          p2: "idhi",
         },
       });
     });
@@ -52,7 +50,7 @@ export default function Main() {
       <div className="wrapper">
         <Header />
         <main className="page">
-          <div id="adfox_167879288494153916"></div>
+        <div id="adfox_167878748592424766"></div>
           <Banner />
           <SliderBanner />
           <Advantages />
@@ -61,7 +59,7 @@ export default function Main() {
           <HowWork />
           <Price />
           <Includes />
-
+          
           <Brigadier />
           <Guarantees />
           <Connection />
