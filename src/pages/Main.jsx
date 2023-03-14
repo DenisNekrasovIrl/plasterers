@@ -59,6 +59,7 @@ export default function Main() {
           <HowWork />
           <Price />
           <Includes />
+          <div></div>
           <Brigadier />
           <Guarantees />
           <Connection />
