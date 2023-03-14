@@ -22,17 +22,17 @@ import Stages from "../components/stages/Stages";
 
 export default function Main() {
   useEffect(() => {
-    window.yaContextCb.push(() => {
-      // eslint-disable-next-line no-undef
-      Ya.adfoxCode.create({
-        ownerId: 1457688,
-        containerId: "adfox_167879156446671429",
-        params: {
-          p1: "cxoyd",
-          p2: "idcr",
-        },
-      });
-    });
+    // window.yaContextCb.push(() => {
+    //   // eslint-disable-next-line no-undef
+    //   Ya.adfoxCode.create({
+    //     ownerId: 1457688,
+    //     containerId: "adfox_167879156446671429",
+    //     params: {
+    //       p1: "cxoyd",
+    //       p2: "idcr",
+    //     },
+    //   });
+    // });
     window.yaContextCb.push(() => {
       // eslint-disable-next-line no-undef
       Ya.adfoxCode.create({
