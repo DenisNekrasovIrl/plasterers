@@ -26,10 +26,10 @@ export default function Main() {
       // eslint-disable-next-line no-undef
       Ya.adfoxCode.create({
         ownerId: 1457688,
-        containerId: "adfox_167878748592424766",
+        containerId: "adfox_16787914940793395",
         params: {
-          p1: "cxouk",
-          p2: "idhi",
+          p1: "cxnxl",
+          p2: "idcq",
         },
       });
     });
