@@ -24,18 +24,24 @@ export default function Main<T extends FC>(): ReactElement {
   useEffect(() => {
     document.querySelector(".container__adfox")?.insertAdjacentHTML(
       "beforeend",
-      `<script>
-    window.yaContextCb.push(() => {
-      Ya.adfoxCode.create({
-        ownerId: 1457688,
-        containerId: "adfox_167876921169527289",
-        params: {
-          p1: "cxnxl",
-          p2: "idcq",
-        },
-      })
-    })
-    </script>`
+      `<!--AdFox START-->
+      <!--yandex_konstantin.kostylev@irlix.ru-->
+      <!--Площадка: Test - site / Главная страница сайта / ht2-->
+      <!--Категория: <не задана>-->
+      <!--Тип баннера: ht2 -  < 1232-->
+      
+      <script>
+          window.yaContextCb.push(()=>{
+              Ya.adfoxCode.create({
+                  ownerId: 1457688,
+                  containerId: 'adfox_167877470820247132',
+                  params: {
+                      p1: 'cxouk',
+                      p2: 'idhi'
+                  }
+              })
+          })
+      </script>`
     );
   }, []);
   return (
@@ -44,7 +50,7 @@ export default function Main<T extends FC>(): ReactElement {
         <Header />
         <main className="page">
           <div className="container__adfox">
-            <div id="adfox_167876921169527289"></div>
+            <div id="adfox_167877470820247132"></div>
           </div>
 
           <Banner />
