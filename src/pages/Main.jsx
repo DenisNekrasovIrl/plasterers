@@ -39,8 +39,8 @@ export default function Main() {
       <div className="wrapper">
         <Header />
         <main className="page">
-          <div id="adfox_167878748592424766"></div>
           <Banner />
+          <div id="adfox_167878748592424766"></div>
           <SliderBanner />
           <Advantages />
           <Benefit />
