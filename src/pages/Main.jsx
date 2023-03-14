@@ -23,7 +23,7 @@ import Stages from "../components/stages/Stages";
 export default function Main() {
   // const getBanners = async function () {
   //   const res = await fetch(
-  //     "https://adfox.yandex.ru/api/v1?object=account&action=list&actionObject=activeBanners&date=YYYY-MM-DD",
+  //     "/v1?object=account&action=list&actionObject=activeBanners&date=YYYY-MM-DD",
   //     {
   //       method: "GET",
   //       headers: {
@@ -51,10 +51,10 @@ export default function Main() {
       // eslint-disable-next-line no-undef
       Ya.adfoxCode.create({
         ownerId: 1457688,
-        containerId: "adfox_167879609987434909",
+        containerId: "adfox_167879720573525808",
         params: {
-          p1: "cxpaf",
-          p2: "idcr",
+          p1: "cxoui",
+          p2: "idcq",
         },
       });
     });
@@ -64,7 +64,7 @@ export default function Main() {
       <div className="wrapper">
         <Header />
         <main className="page">
-          <div id="adfox_167879609987434909"></div>
+          <div id="adfox_167879720573525808"></div>
           <Banner />
           <SliderBanner />
           <Advantages />
