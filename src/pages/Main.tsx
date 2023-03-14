@@ -26,23 +26,23 @@ export default function Main<T extends FC>(): ReactElement {
       "beforeend",
       `<!--AdFox START-->
       <!--yandex_konstantin.kostylev@irlix.ru-->
-      <!--Площадка: Test - site / * / *-->
-      <!--Тип баннера: 100%x100% Turbo-->
-      <!--Расположение: верх страницы-->
-      
+      <!--Площадка: Test - site / Главная страница сайта / br1-->
+      <!--Категория: <не задана>-->
+      <!--Тип баннера: br1 - 787x800-->
+     
       <script>
           window.yaContextCb.push(()=>{
               Ya.adfoxCode.create({
                   ownerId: 1457688,
-                  containerId: 'adfox_167877541954538059',
+                  containerId: 'adfox_167877559250214463',
                   params: {
-                      pp: 'g',
-                      ps: 'ghza',
-                      p2: 'hukd'
+                      p1: 'cxoui',
+                      p2: 'idcq'
                   }
               })
           })
       </script>
+      
       `
     );
   }, []);
@@ -52,7 +52,7 @@ export default function Main<T extends FC>(): ReactElement {
         <Header />
         <main className="page">
           <div className="container__adfox">
-            <div id="adfox_167877541954538059"></div>
+            <div id="adfox_167877559250214463"></div>
           </div>
           <Banner />
           <SliderBanner />
