@@ -22,35 +22,34 @@ import Stages from "../components/stages/Stages";
 
 export default function Main() {
   useEffect(() => {
-    // window.yaContextCb.push(() => {
-    //   // eslint-disable-next-line no-undef
-    //   Ya.adfoxCode.create({
-    //     ownerId: 1457688,
-    //     containerId: "adfox_167879156446671429",
-    //     params: {
-    //       p1: "cxoyd",
-    //       p2: "idcr",
-    //     },
-    //   });
-    // });
     window.yaContextCb.push(() => {
       // eslint-disable-next-line no-undef
       Ya.adfoxCode.create({
         ownerId: 1457688,
-        containerId: "adfox_167878748592424766",
+        containerId: "adfox_167879156446671429",
         params: {
-          p1: "cxouk",
-          p2: "idhi",
+          p1: "cxoyd",
+          p2: "idcr",
         },
       });
     });
+    // window.yaContextCb.push(() => {
+    //   // eslint-disable-next-line no-undef
+    //   Ya.adfoxCode.create({
+    //     ownerId: 1457688,
+    //     containerId: "adfox_167878748592424766",
+    //     params: {
+    //       p1: "cxouk",
+    //       p2: "idhi",
+    //     },
+    //   });
+    // });
   }, []);
   return (
     <>
       <div className="wrapper">
         <Header />
         <main className="page">
-          <div className="adfox_167878748592424766"></div>
           <Banner />
           <SliderBanner />
           <Advantages />
