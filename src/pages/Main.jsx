@@ -21,22 +21,21 @@ import Reviews from "../components/reviews/Reviews";
 import Stages from "../components/stages/Stages";
 
 export default function Main() {
-  const getBanners = async function () {
-    const res = await fetch(
-      "/v1?object=account&action=list&actionObject=activeBanners&date=YYYY-MM-DD",
-      {
-        method: "GET",
-        credentials: "include",
-        headers: {
-          "X-Yandex-API-Key": "613a1820-ddcf-43b3-8bfb-fab9a3e828a6",
-        },
-      }
-    );
-    const json = await res.json();
-    console.log(json);
-  };
+  // const getBanners = async function () {
+  //   const res = await fetch(
+  //     "https://adfox.yandex.ru/api/v1?object=account&action=list&actionObject=activeBanners&date=YYYY-MM-DD",
+  //     {
+  //       method: "GET",
+  //       headers: {
+  //         "X-Yandex-API-Key": "613a1820-ddcf-43b3-8bfb-fab9a3e828a6",
+  //       },
+  //     }
+  //   );
+  //   const json = await res.json();
+  //   console.log(json);
+  // };
   useEffect(() => {
-    getBanners();
+    // getBanners();
     window.yaContextCb.push(() => {
       // eslint-disable-next-line no-undef
       Ya.adfoxCode.create({
@@ -52,7 +51,7 @@ export default function Main() {
       // eslint-disable-next-line no-undef
       Ya.adfoxCode.create({
         ownerId: 1457688,
-        containerId: "adfox_167879355765384076",
+        containerId: "adfox_167879609987434909",
         params: {
           p1: "cxpaf",
           p2: "idcr",
@@ -65,7 +64,7 @@ export default function Main() {
       <div className="wrapper">
         <Header />
         <main className="page">
-          <div id="adfox_167879355765384076"></div>
+          <div id="adfox_167879609987434909"></div>
           <Banner />
           <SliderBanner />
           <Advantages />
