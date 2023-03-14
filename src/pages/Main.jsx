@@ -34,37 +34,37 @@ export default function Main() {
   //   const json = await res.json();
   //   console.log(json);
   // };
-  useEffect(() => {
-    // getBanners();
-    window.yaContextCb.push(() => {
-      // eslint-disable-next-line no-undef
-      Ya.adfoxCode.create({
-        ownerId: 1457688,
-        containerId: "adfox_167879156446671429",
-        params: {
-          p1: "cxoyd",
-          p2: "idcr",
-        },
-      });
-    });
-    window.yaContextCb.push(() => {
-      // eslint-disable-next-line no-undef
-      Ya.adfoxCode.create({
-        ownerId: 1457688,
-        containerId: "adfox_167879720573525808",
-        params: {
-          p1: "cxoui",
-          p2: "idcq",
-        },
-      });
-    });
-  }, []);
+  // useEffect(() => {
+  //   // getBanners();
+  //   window.yaContextCb.push(() => {
+  //     // eslint-disable-next-line no-undef
+  //     Ya.adfoxCode.create({
+  //       ownerId: 1457688,
+  //       containerId: "adfox_167879156446671429",
+  //       params: {
+  //         p1: "cxoyd",
+  //         p2: "idcr",
+  //       },
+  //     });
+  //   });
+  //   window.yaContextCb.push(() => {
+  //     // eslint-disable-next-line no-undef
+  //     Ya.adfoxCode.create({
+  //       ownerId: 1457688,
+  //       containerId: "adfox_167879720573525808",
+  //       params: {
+  //         p1: "cxoui",
+  //         p2: "idcq",
+  //       },
+  //     });
+  //   });
+  // }, []);
   return (
     <>
       <div className="wrapper">
         <Header />
         <main className="page">
-          <div id="adfox_167879720573525808"></div>
+          {/* <div id="adfox_167879720573525808"></div> */}
           <Banner />
           <SliderBanner />
           <Advantages />
