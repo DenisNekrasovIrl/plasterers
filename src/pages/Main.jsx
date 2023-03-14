@@ -23,6 +23,7 @@ import Stages from "../components/stages/Stages";
 export default function Main() {
   useEffect(() => {
     window.yaContextCb.push(() => {
+      console.log("dsadsa");
       // eslint-disable-next-line no-undef
       Ya.adfoxCode.create({
         ownerId: 1457688,
@@ -39,7 +40,9 @@ export default function Main() {
       <div className="wrapper">
         <Header />
         <main className="page">
-          <div className="container__adfox"></div>
+          <div className="container__adfox">
+            <div className="adfox_167878822119673363"></div>
+          </div>
           <Banner />
           <SliderBanner />
           <Advantages />
