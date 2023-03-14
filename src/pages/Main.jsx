@@ -33,12 +33,24 @@ export default function Main() {
         },
       });
     });
+    window.yaContextCb.push(() => {
+      // eslint-disable-next-line no-undef
+      Ya.adfoxCode.create({
+        ownerId: 1457688,
+        containerId: "adfox_167878748592424766",
+        params: {
+          p1: "cxouk",
+          p2: "idhi",
+        },
+      });
+    });
   }, []);
   return (
     <>
       <div className="wrapper">
         <Header />
         <main className="page">
+          <div className="adfox_167878748592424766"></div>
           <Banner />
           <SliderBanner />
           <Advantages />
