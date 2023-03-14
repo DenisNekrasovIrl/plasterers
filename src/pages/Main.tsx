@@ -21,31 +21,17 @@ import Reviews from "../components/reviews/Reviews";
 import Stages from "../components/stages/Stages";
 
 export default function Main<T extends FC>(): ReactElement {
-  useEffect(() => {
-    document.querySelector(".container__adfox")?.insertAdjacentHTML(
-      "beforeend",
-      `<!--AdFox START-->
-      <!--yandex_konstantin.kostylev@irlix.ru-->
-      <!--Площадка: Test - site / Главная страница сайта / br1-->
-      <!--Категория: <не задана>-->
-      <!--Тип баннера: br1 - 787x800-->
-      <script>
-      console.log("ADFOX")
-          window.yaContextCb.push(()=>{
-              Ya.adfoxCode.create({
-                  ownerId: 1457688,
-                  containerId: 'adfox_167877559250214463',
-                  params: {
-                      p1: 'cxoui',
-                      p2: 'idcq'
-                  }
-              })
-          })
-      </script>
-      
-      `
-    );
-  }, []);
+  // const getBanner = async function () {
+  //   const res = await fetch("https://adfox.yandex.ru/api/v1?object=placement&action=info&mode=bannerPlace&placeID=1457688&bannerID=<integer>", {
+  //     method: "GET",
+  //     headers: {
+  //       "X-Yandex-API-Key": "150f153e-c29e-4cf2-a169-29375400f9b1",
+  //     },
+  //   });
+  // };
+  // useEffect(() => {
+  //   getBanner()
+  // }, []);
   return (
     <>
       <div className="wrapper">
