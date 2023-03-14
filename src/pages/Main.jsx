@@ -37,10 +37,10 @@ export default function Main() {
       // eslint-disable-next-line no-undef
       Ya.adfoxCode.create({
         ownerId: 1457688,
-        containerId: "adfox_167879304243816005",
+        containerId: "adfox_167879355765384076",
         params: {
-          p1: "cxouk",
-          p2: "idhi",
+          p1: "cxpaf",
+          p2: "idcr",
         },
       });
     });
@@ -50,7 +50,7 @@ export default function Main() {
       <div className="wrapper">
         <Header />
         <main className="page">
-          <div id="adfox_167879304243816005"></div>
+          <div id="adfox_167879355765384076"></div>
           <Banner />
           <SliderBanner />
           <Advantages />
