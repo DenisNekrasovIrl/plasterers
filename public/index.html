@@ -20,7 +20,7 @@
     <div id="adfox_167877559250214463"></div>
     <script>
       console.log("ADFOX");
-      window.yaContextCb.push(() => {
+      const content = window.yaContextCb.push(() => {
         Ya.adfoxCode.create({
           ownerId: 1457688,
           containerId: "adfox_167877559250214463",
@@ -30,6 +30,7 @@
           },
         });
       });
+      console.log(content)
     </script>
   </body>
 </html>
