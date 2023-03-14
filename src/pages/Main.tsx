@@ -21,25 +21,33 @@ import Reviews from "../components/reviews/Reviews";
 import Stages from "../components/stages/Stages";
 
 export default function Main<T extends FC>(): ReactElement {
-  // const getBanner = async function () {
-  //   const res = await fetch("https://adfox.yandex.ru/api/v1?object=placement&action=info&mode=bannerPlace&placeID=1457688&bannerID=<integer>", {
-  //     method: "GET",
-  //     headers: {
-  //       "X-Yandex-API-Key": "150f153e-c29e-4cf2-a169-29375400f9b1",
-  //     },
-  //   });
-  // };
-  // useEffect(() => {
-  //   getBanner()
-  // }, []);
+  useEffect(() => {
+    document.querySelector(".container__adfox")?.insertAdjacentHTML(
+      "afterbegin",
+      `
+    
+    <div id="adfox_167878822119673363"></div>
+    <script>
+      window.yaContextCb.push(() => {
+        Ya.adfoxCode.create({
+          ownerId: 1457688,
+          containerId: "adfox_167878822119673363",
+          params: {
+            p1: "cxouk",
+            p2: "idhi",
+          },
+        });
+      });
+    </script>
+    `
+    );
+  }, []);
   return (
     <>
       <div className="wrapper">
         <Header />
         <main className="page">
-          <div className="container__adfox">
-            <div id="adfox_167877559250214463"></div>
-          </div>
+          <div className="container__adfox"></div>
           <Banner />
           <SliderBanner />
           <Advantages />
