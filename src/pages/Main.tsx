@@ -26,6 +26,22 @@ export default function Main<T extends FC>(): ReactElement {
       <div className="wrapper">
         <Header />
         <main className="page">
+          {/* <div className="banner_adfox">
+            <div id="adfox_167876921169527289"></div>
+            <script>
+              {
+              window.yaContextCb.push(() => {
+                Ya.adfoxCode.create({
+                  ownerId: 1457688,
+                  containerId: "adfox_167876921169527289",
+                  params: {
+                    p1: "cxnxl",
+                    p2: "idcq",
+                  },
+                });
+              })}
+            </script>
+          </div> */}
           <Banner />
           <SliderBanner />
           <Advantages />
