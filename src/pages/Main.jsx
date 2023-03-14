@@ -20,29 +20,19 @@ import Price from "../components/price/Price";
 import Reviews from "../components/reviews/Reviews";
 import Stages from "../components/stages/Stages";
 
-export default function Main<T extends FC>(): ReactElement {
+export default function Main() {
   useEffect(() => {
-    setTimeout(() => {
-      document.querySelector(".container__adfox")?.insertAdjacentHTML(
-        "afterbegin",
-        `
-      
-      <div id="adfox_167878822119673363"></div>
-      <script>
-        window.yaContextCb.push(() => {
-          Ya.adfoxCode.create({
-            ownerId: 1457688,
-            containerId: "adfox_167878822119673363",
-            params: {
-              p1: "cxouk",
-              p2: "idhi",
-            },
-          });
-        });
-      </script>
-      `
-      );
-    }, 1000);
+    window.yaContextCb.push(() => {
+      // eslint-disable-next-line no-undef
+      Ya.adfoxCode.create({
+        ownerId: 1457688,
+        containerId: "adfox_167878822119673363",
+        params: {
+          p1: "cxouk",
+          p2: "idhi",
+        },
+      });
+    });
   }, []);
   return (
     <>
