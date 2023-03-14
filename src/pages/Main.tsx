@@ -22,25 +22,27 @@ import Stages from "../components/stages/Stages";
 
 export default function Main<T extends FC>(): ReactElement {
   useEffect(() => {
-    document.querySelector(".container__adfox")?.insertAdjacentHTML(
-      "afterbegin",
-      `
-    
-    <div id="adfox_167878822119673363"></div>
-    <script>
-      window.yaContextCb.push(() => {
-        Ya.adfoxCode.create({
-          ownerId: 1457688,
-          containerId: "adfox_167878822119673363",
-          params: {
-            p1: "cxouk",
-            p2: "idhi",
-          },
+    setTimeout(() => {
+      document.querySelector(".container__adfox")?.insertAdjacentHTML(
+        "afterbegin",
+        `
+      
+      <div id="adfox_167878822119673363"></div>
+      <script>
+        window.yaContextCb.push(() => {
+          Ya.adfoxCode.create({
+            ownerId: 1457688,
+            containerId: "adfox_167878822119673363",
+            params: {
+              p1: "cxouk",
+              p2: "idhi",
+            },
+          });
         });
-      });
-    </script>
-    `
-    );
+      </script>
+      `
+      );
+    }, 1000);
   }, []);
   return (
     <>
