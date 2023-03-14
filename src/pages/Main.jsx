@@ -23,7 +23,7 @@ import Stages from "../components/stages/Stages";
 export default function Main() {
   // const getBanners = async function () {
   //   const res = await fetch(
-  //     "/v1?object=account&action=list&actionObject=activeBanners&date=YYYY-MM-DD",
+  //     "api/v1?object=account&action=list&actionObject=activeBanners&date=YYYY-MM-DD",
   //     {
   //       method: "GET",
   //       headers: {
@@ -35,29 +35,7 @@ export default function Main() {
   //   console.log(json);
   // };
   // useEffect(() => {
-  //   // getBanners();
-  //   window.yaContextCb.push(() => {
-  //     // eslint-disable-next-line no-undef
-  //     Ya.adfoxCode.create({
-  //       ownerId: 1457688,
-  //       containerId: "adfox_167879156446671429",
-  //       params: {
-  //         p1: "cxoyd",
-  //         p2: "idcr",
-  //       },
-  //     });
-  //   });
-  //   window.yaContextCb.push(() => {
-  //     // eslint-disable-next-line no-undef
-  //     Ya.adfoxCode.create({
-  //       ownerId: 1457688,
-  //       containerId: "adfox_167879720573525808",
-  //       params: {
-  //         p1: "cxoui",
-  //         p2: "idcq",
-  //       },
-  //     });
-  //   });
+  //   getBanners();
   // }, []);
   return (
     <>
