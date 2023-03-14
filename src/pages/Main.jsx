@@ -33,17 +33,17 @@ export default function Main() {
         },
       });
     });
-    // window.yaContextCb.push(() => {
-    //   // eslint-disable-next-line no-undef
-    //   Ya.adfoxCode.create({
-    //     ownerId: 1457688,
-    //     containerId: "adfox_167878748592424766",
-    //     params: {
-    //       p1: "cxouk",
-    //       p2: "idhi",
-    //     },
-    //   });
-    // });
+    window.yaContextCb.push(() => {
+      // eslint-disable-next-line no-undef
+      Ya.adfoxCode.create({
+        ownerId: 1457688,
+        containerId: "adfox_167878748592424766",
+        params: {
+          p1: "cxouk",
+          p2: "idhi",
+        },
+      });
+    });
   }, []);
   return (
     <>
@@ -58,7 +58,7 @@ export default function Main() {
           <HowWork />
           <Price />
           <Includes />
-          <div></div>
+          <div id="adfox_167878748592424766"></div>
           <Brigadier />
           <Guarantees />
           <Connection />
