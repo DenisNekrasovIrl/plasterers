@@ -30,8 +30,8 @@ export default function Main<T extends FC>(): ReactElement {
       <!--Категория: <не задана>-->
       <!--Тип баннера: br1 - 787x800-->
       <script>
+      console.log("ADFOX")
           window.yaContextCb.push(()=>{
-            console.log("ADFOX")
               Ya.adfoxCode.create({
                   ownerId: 1457688,
                   containerId: 'adfox_167877559250214463',
