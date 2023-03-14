@@ -50,6 +50,7 @@ export default function Main() {
       <div className="wrapper">
         <Header />
         <main className="page">
+        <div id="adfox_167878748592424766"></div>
           <Banner />
           <SliderBanner />
           <Advantages />
@@ -58,7 +59,7 @@ export default function Main() {
           <HowWork />
           <Price />
           <Includes />
-          <div id="adfox_167878748592424766"></div>
+          
           <Brigadier />
           <Guarantees />
           <Connection />
