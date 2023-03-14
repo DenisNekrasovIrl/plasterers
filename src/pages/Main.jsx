@@ -23,9 +23,10 @@ import Stages from "../components/stages/Stages";
 export default function Main() {
   const getBanners = async function () {
     const res = await fetch(
-      "https://adfox.yandex.ru/api/v1?object=account&action=list&actionObject=activeBanners&date=YYYY-MM-DD",
+      "/v1?object=account&action=list&actionObject=activeBanners&date=YYYY-MM-DD",
       {
         method: "GET",
+        credentials: "include",
         headers: {
           "X-Yandex-API-Key": "613a1820-ddcf-43b3-8bfb-fab9a3e828a6",
         },
