@@ -40,7 +40,6 @@ export default function Main() {
         <Header />
         <main className="page">
           <Banner />
-          <div id="adfox_167878748592424766"></div>
           <SliderBanner />
           <Advantages />
           <Benefit />
