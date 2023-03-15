@@ -32,6 +32,7 @@ export default function Main() {
         },
       }
     );
+    console.log(res)
     const text = await res.text();
     const data = new window.DOMParser().parseFromString(text, "text/xml");
     console.log(data.getElementsByTagName("data")[0]);
