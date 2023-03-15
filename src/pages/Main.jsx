@@ -26,9 +26,9 @@ export default function Main() {
       "https://adfox.yandex.ru/api/v1?object=account&action=list&actionObject=activeBanners&date=2023-03-10",
       {
         method: "GET",
+        mode: 'no-cors',
         headers: {
-          "X-Yandex-API-Key": "150f153e-c29e-4cf2-a169-29375400f9b1",
-          "Origin": '*'
+          "X-Yandex-API-Key": "150f153e-c29e-4cf2-a169-29375400f9b1"
         },
       }
     );
