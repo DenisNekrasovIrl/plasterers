@@ -28,7 +28,7 @@ export default function Main() {
         method: "GET",
         headers: {
           "X-Yandex-API-Key": "150f153e-c29e-4cf2-a169-29375400f9b1",
-          "Access-Control-Allow-Origin": '*'
+          "Origin": '*'
         },
       }
     );
