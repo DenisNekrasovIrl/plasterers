@@ -21,28 +21,58 @@ import Reviews from "../components/reviews/Reviews";
 import Stages from "../components/stages/Stages";
 
 export default function Main() {
-  // const getBanners = async function () {
-  //   const res = await fetch(
-  //     "api/v1?object=account&action=list&actionObject=activeBanners&date=YYYY-MM-DD",
-  //     {
-  //       method: "GET",
-  //       headers: {
-  //         "X-Yandex-API-Key": "613a1820-ddcf-43b3-8bfb-fab9a3e828a6",
-  //       },
-  //     }
-  //   );
-  //   const json = await res.json();
-  //   console.log(json);
-  // };
-  // useEffect(() => {
-  //   getBanners();
-  // }, []);
+  const getBanner = async function () {
+    const res = await fetch(
+      "/api/v1?object=account&action=list&actionObject=activeBanners&date=2023-03-10",
+      {
+        method: "GET",
+        headers: {
+          "X-Yandex-API-Key": "150f153e-c29e-4cf2-a169-29375400f9b1",
+        },
+      }
+    );
+    const text = await res.text();
+    const data = new window.DOMParser().parseFromString(text, "text/xml");
+    console.log(data.getElementsByTagName("data")[0]);
+    const resPlace = await fetch(
+      `/api/v1?object=account&action=list&actionObject=place`,
+      {
+        method: "GET",
+        headers: {
+          "X-Yandex-API-Key": "150f153e-c29e-4cf2-a169-29375400f9b1",
+        },
+      }
+    );
+    const textPlace = await resPlace.text();
+    const dataPlace = new window.DOMParser().parseFromString(
+      textPlace,
+      "text/xml"
+    );
+    console.log(dataPlace.getElementsByTagName("data")[0]);
+    const resBanner = await fetch(
+      `/api/v1?object=placement&action=info&mode=place&placeID=1327597`,
+      {
+        method: "GET",
+        headers: {
+          "X-Yandex-API-Key": "150f153e-c29e-4cf2-a169-29375400f9b1",
+        },
+      }
+    );
+    const textBanner = await resBanner.text();
+    const dataBanner = new window.DOMParser().parseFromString(
+      textBanner,
+      "text/xml"
+    );
+    console.log(dataBanner);
+  };
+  useEffect(() => {
+    getBanner();
+  }, []);
   return (
     <>
       <div className="wrapper">
         <Header />
         <main className="page">
-          {/* <div id="adfox_167879720573525808"></div> */}
           <Banner />
           <SliderBanner />
           <Advantages />
