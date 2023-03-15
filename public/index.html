@@ -18,17 +18,30 @@
     <!--Категория: <не задана>-->
     <!--Тип баннера: ht2 1280-->
     <div id="adfox_16789082770943257"></div>
+    
     <script>
-      window.yaContextCb.push(() => {
-        Ya.adfoxCode.create({
+      
+    window.addEventListener('load', (event) => {
+        window.Ya && window.Ya.adfoxCode && window.Ya.adfoxCode.create({
           ownerId: 1457688,
           containerId: "adfox_16789082770943257",
           params: {
             p1: "cxpaf",
             p2: "idcr",
-          },
-        });
-      });
+            }
+        })
+    });
+
+      // window.yaContextCb.push(() => {
+      //   Ya.adfoxCode.create({
+      //     ownerId: 1457688,
+      //     containerId: "adfox_16789082770943257",
+      //     params: {
+      //       p1: "cxpaf",
+      //       p2: "idcr",
+      //     },
+      //   });
+      // });
     </script>
 
     <div id="root"></div>
