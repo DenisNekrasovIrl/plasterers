@@ -22,6 +22,7 @@ import Stages from "../components/stages/Stages";
 
 export default function Main() {
 
+
   useLayoutEffect(() => {
 
     window.yaContextCb.push(() => {
@@ -35,14 +36,24 @@ export default function Main() {
         }
       })
     })
-
+    window.yaContextCb.push(() => {
+      // eslint-disable-next-line no-undef
+      Ya.adfoxCode.create({
+        ownerId: 1457688,
+        containerId: 'adfox_167896689561587795',
+        params: {
+          p1: 'cxoui',
+          p2: 'idcq'
+        }
+      })
+    })
   }, [])
   return (
     <>
       <div className="wrapper">
         <Header />
         <main className="page" style={{ display: 'flex', justifyContent: 'center' }}>
-          <div style={{ position: 'absolute', left: '420px' }}><div id="adfox_167895933918077592"></div></div>
+          <div><div id="adfox_167895933918077592"></div></div>
           <div>
             <Banner />
             <SliderBanner />
@@ -63,7 +74,7 @@ export default function Main() {
             <Contacts />
             <Ensure />
           </div>
-          <div>BANNER</div>
+          <div><div id="adfox_167896689561587795"></div></div>
         </main>
         <Footer />
       </div>
