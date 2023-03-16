@@ -47,11 +47,23 @@ export default function Main() {
         }
       })
     })
+    window.yaContextCb.push(() => {
+      // eslint-disable-next-line no-undef
+      Ya.adfoxCode.create({
+        ownerId: 1457688,
+        containerId: 'adfox_167896836525063919',
+        params: {
+          p1: 'cxpis',
+          p2: 'idjv'
+        }
+      })
+    })
   }, [])
   return (
     <>
       <div className="wrapper">
         <Header />
+        <div style={{ display: 'flex', justifyContent: 'center' }}><div id="adfox_167896836525063919"></div></div>
         <main className="page" style={{ display: 'flex', justifyContent: 'center' }}>
           <div><div id="adfox_167895933918077592"></div></div>
           <div>
