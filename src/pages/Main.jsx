@@ -23,7 +23,7 @@ import Stages from "../components/stages/Stages";
 export default function Main() {
 
   useEffect(() => {
-    document.querySelector('.adfox_167895933918077592').insertAdjacentHTML('afterend', `
+    document.getElementById('adfox_167895933918077592').insertAdjacentHTML('afterend', `
   <script>
   window.yaContextCb.push(()=>{
       Ya.adfoxCode.create({
