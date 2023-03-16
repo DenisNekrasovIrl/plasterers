@@ -21,7 +21,12 @@ import Reviews from "../components/reviews/Reviews";
 import Stages from "../components/stages/Stages";
 
 export default function Main() {
-
+  useEffect(() => {
+    setTimeout(() => {
+      const banner = document.querySelector('.adfox-banner-background');
+      document.getElementById('adfox_167891480654479853').append(banner);
+    }, 1000)
+  }, [])
   return (
     <>
       <div className="wrapper">
