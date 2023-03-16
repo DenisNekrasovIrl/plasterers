@@ -41,26 +41,29 @@ export default function Main() {
     <>
       <div className="wrapper">
         <Header />
-        <main className="page">
-          <Banner />
-          <div id="adfox_167895933918077592"></div>
-          <SliderBanner />
-          <Advantages />
-          <Benefit />
-          <Calculation />
-          <HowWork />
-          <Price />
-          <Includes />
-          <Brigadier />
-          <Guarantees />
-          <Connection />
-          <AdditionalBenefit />
-          <Reviews />
-          <Examples />
-          <Gallery />
-          <Stages />
-          <Contacts />
-          <Ensure />
+        <main className="page" style={{ display: 'flex', justifyContent: 'center' }}>
+          <div style={{ position: 'absolute', left: '420px' }}><div id="adfox_167895933918077592"></div></div>
+          <div>
+            <Banner />
+            <SliderBanner />
+            <Advantages />
+            <Benefit />
+            <Calculation />
+            <HowWork />
+            <Price />
+            <Includes />
+            <Brigadier />
+            <Guarantees />
+            <Connection />
+            <AdditionalBenefit />
+            <Reviews />
+            <Examples />
+            <Gallery />
+            <Stages />
+            <Contacts />
+            <Ensure />
+          </div>
+          <div>BANNER</div>
         </main>
         <Footer />
       </div>
