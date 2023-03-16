@@ -24,7 +24,7 @@ export default function Main() {
   useEffect(() => {
     setTimeout(() => {
       const banner = document.querySelector('.adfox-banner-background');
-      document.getElementById('adfox_167891480654479853').append(banner);
+      document.getElementById('adfox_167894822106839019').append(banner);
     }, 1000)
   }, [])
   return (
