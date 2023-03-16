@@ -24,7 +24,17 @@ export default function Main() {
 
 
   useLayoutEffect(() => {
-
+    window.yaContextCb.push(() => {
+      // eslint-disable-next-line no-undef
+      Ya.adfoxCode.create({
+        ownerId: 1457688,
+        containerId: 'adfox_167895533089117900',
+        params: {
+          p1: 'cxpaf',
+          p2: 'idcr'
+        }
+      })
+    })
     window.yaContextCb.push(() => {
       // eslint-disable-next-line no-undef
       Ya.adfoxCode.create({
@@ -61,6 +71,9 @@ export default function Main() {
   }, [])
   return (
     <>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <div id="adfox_167895533089117900"></div>
+      </div>
       <div className="wrapper">
         <Header />
         <div style={{ display: 'flex', justifyContent: 'center' }}><div id="adfox_167896836525063919"></div></div>
