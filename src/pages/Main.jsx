@@ -23,20 +23,22 @@ import Stages from "../components/stages/Stages";
 export default function Main() {
 
   useEffect(() => {
-    document.getElementById('adfox_167895933918077592').insertAdjacentHTML('afterend', `
-  <script>
-  window.yaContextCb.push(()=>{
-      Ya.adfoxCode.create({
-          ownerId: 1457688,
-          containerId: 'adfox_167895933918077592',
-          params: {
-              p1: 'cxnxl',
-              p2: 'idcq'
-          }
+    setTimeout(() => {
+      document.getElementById('adfox_167895933918077592').insertAdjacentHTML('afterend', `
+      <script>
+      window.yaContextCb.push(()=>{
+          Ya.adfoxCode.create({
+              ownerId: 1457688,
+              containerId: 'adfox_167895933918077592',
+              params: {
+                  p1: 'cxnxl',
+                  p2: 'idcq'
+              }
+          })
       })
-  })
-</script>
-  `)
+    </script>
+      `)
+    }, 1000)
 
   }, [])
   return (
