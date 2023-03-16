@@ -21,20 +21,7 @@ import Reviews from "../components/reviews/Reviews";
 import Stages from "../components/stages/Stages";
 
 export default function Main() {
-  useEffect(() => {
-    window.yaContextCb.push(() => {
-      Ya.adfoxCode.create({
-        ownerId: 1457688,
-        containerId: 'adfox_167894822106839019',
-        params: {
-          p1: 'cxpis',
-          p2: 'idjv'
-        }
-      })
-    })
 
-    console.log('dsad')
-  }, []);
   return (
     <>
       <div className="wrapper">
@@ -48,7 +35,6 @@ export default function Main() {
           <HowWork />
           <Price />
           <Includes />
-          <div id="adfox_167894822106839019"></div>
           <Brigadier />
           <Guarantees />
           <Connection />
