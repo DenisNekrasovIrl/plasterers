@@ -32,6 +32,8 @@ export default function Main() {
         }
       })
     })
+
+    console.log('dsad')
   }, []);
   return (
     <>
