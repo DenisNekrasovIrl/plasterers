@@ -22,20 +22,16 @@ import Stages from "../components/stages/Stages";
 
 export default function Main() {
   useEffect(() => {
-    document.querySelector('.banner-a2').insertAdjacentHTML('afterbegin', `
-    <script>
-    window.yaContextCb.push(()=>{
-        Ya.adfoxCode.create({
-            ownerId: 1457688,
-            containerId: 'adfox_167894822106839019',
-            params: {
-                p1: 'cxpis',
-                p2: 'idjv'
-            }
-        })
+    window.yaContextCb.push(() => {
+      Ya.adfoxCode.create({
+        ownerId: 1457688,
+        containerId: 'adfox_167894822106839019',
+        params: {
+          p1: 'cxpis',
+          p2: 'idjv'
+        }
+      })
     })
-</script>
-    `)
   }, []);
   return (
     <>
@@ -50,7 +46,7 @@ export default function Main() {
           <HowWork />
           <Price />
           <Includes />
-          <div className='banner-a2' id="adfox_167894822106839019"></div>
+          <div id="adfox_167894822106839019"></div>
           <Brigadier />
           <Guarantees />
           <Connection />
