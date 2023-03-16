@@ -21,12 +21,31 @@ import Reviews from "../components/reviews/Reviews";
 import Stages from "../components/stages/Stages";
 
 export default function Main() {
+
+  useEffect(() => {
+    document.querySelector('.adfox_167895933918077592').insertAdjacentHTML('afterend', `
+  <script>
+  window.yaContextCb.push(()=>{
+      Ya.adfoxCode.create({
+          ownerId: 1457688,
+          containerId: 'adfox_167895933918077592',
+          params: {
+              p1: 'cxnxl',
+              p2: 'idcq'
+          }
+      })
+  })
+</script>
+  `)
+
+  }, [])
   return (
     <>
       <div className="wrapper">
         <Header />
         <main className="page">
           <Banner />
+          <div id="adfox_167895933918077592"></div>
           <SliderBanner />
           <Advantages />
           <Benefit />
