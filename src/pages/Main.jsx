@@ -1,4 +1,4 @@
-import React, { FC, ReactElement, useEffect } from "react";
+import React, { FC, ReactElement, useLayoutEffect } from "react";
 import AdditionalBenefit from "../components/additional-benefit/AdditionalBenefit";
 import Advantages from "../components/advantages/Advantages";
 import Banner from "../components/banner/Banner";
@@ -22,23 +22,19 @@ import Stages from "../components/stages/Stages";
 
 export default function Main() {
 
-  useEffect(() => {
-    setTimeout(() => {
-      document.getElementById('adfox_167895933918077592').insertAdjacentHTML('afterend', `
-      <script>
-      window.yaContextCb.push(()=>{
-          Ya.adfoxCode.create({
-              ownerId: 1457688,
-              containerId: 'adfox_167895933918077592',
-              params: {
-                  p1: 'cxnxl',
-                  p2: 'idcq'
-              }
-          })
+  useLayoutEffect(() => {
+
+    window.yaContextCb.push(() => {
+      // eslint-disable-next-line no-undef
+      Ya.adfoxCode.create({
+        ownerId: 1457688,
+        containerId: 'adfox_167895933918077592',
+        params: {
+          p1: 'cxnxl',
+          p2: 'idcq'
+        }
       })
-    </script>
-      `)
-    }, 1000)
+    })
 
   }, [])
   return (
