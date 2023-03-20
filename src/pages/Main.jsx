@@ -69,12 +69,26 @@ export default function Main() {
       })
     })
     if (document.documentElement.clientWidth >= 1280) {
-      // desctop
+      //   // desctop
       window.yaContextCb.push(() => {
         // eslint-disable-next-line no-undef
         Ya.adfoxCode.create({
           ownerId: 1457688,
-          containerId: 'adfox_167931375876641293',
+          containerId: 'adfox_167931750437195494',
+          params: {
+            p1: 'cxpis',
+            p2: 'idjv'
+          }
+        })
+      })
+    }
+    if (document.documentElement.clientWidth < 1280 && document.documentElement.clientWidth >= 768) {
+      // mobile - 640px
+      window.yaContextCb.push(() => {
+        // eslint-disable-next-line no-undef
+        Ya.adfoxCode.create({
+          ownerId: 1457688,
+          containerId: 'adfox_16793172127941757',
           params: {
             p1: 'cxrcu',
             p2: 'idjv'
@@ -82,28 +96,14 @@ export default function Main() {
         })
       })
     }
-    if (document.documentElement.clientWidth <= 1280 && document.documentElement.clientWidth >= 640) {
-      //     // mobile - 640px
+    if (document.documentElement.clientWidth < 768 && document.documentElement.clientWidth >= 320) {
       window.yaContextCb.push(() => {
         // eslint-disable-next-line no-undef
         Ya.adfoxCode.create({
           ownerId: 1457688,
-          containerId: 'adfox_167931370953572820',
+          containerId: 'adfox_167931708269983910',
           params: {
             p1: 'cxrcx',
-            p2: 'idjv'
-          }
-        })
-      })
-    }
-    if (document.documentElement.clientWidth <= 640 && document.documentElement.clientWidth >= 320) {
-      window.yaContextCb.push(() => {
-        // eslint-disable-next-line no-undef
-        Ya.adfoxCode.create({
-          ownerId: 1457688,
-          containerId: 'adfox_167931579131214008',
-          params: {
-            p1: 'cxrcu',
             p2: 'idjv'
           }
         })
@@ -117,9 +117,9 @@ export default function Main() {
       </div>
       <div className="wrapper">
         <Header />
-        <div style={{ display: 'flex', justifyContent: 'center' }}><div id="adfox_167931375876641293"></div></div>
-        <div style={{ display: 'flex', justifyContent: 'center' }}><div id="adfox_167931370953572820"></div></div>
-        <div style={{ display: 'flex', justifyContent: 'center' }}><div id="adfox_167931579131214008"></div></div>
+        <div style={{ display: 'flex', justifyContent: 'center' }}><div id="adfox_167931708269983910"></div></div>
+        <div style={{ display: 'flex', justifyContent: 'center' }}><div id="adfox_16793172127941757"></div></div>
+        <div style={{ display: 'flex', justifyContent: 'center' }}><div id="adfox_167931750437195494"></div></div>
         <main className="page" style={{ display: 'flex', justifyContent: 'center' }}>
           <div style={{ position: 'relative', top: '-100px', right: '20px' }}><div id="adfox_167895933918077592"></div></div>
           <div>
