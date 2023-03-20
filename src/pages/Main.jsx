@@ -78,7 +78,7 @@ export default function Main() {
         <Header />
         <div style={{ display: 'flex', justifyContent: 'center' }}><div id="adfox_167896836525063919"></div></div>
         <main className="page" style={{ display: 'flex', justifyContent: 'center' }}>
-          <div style={{ position: 'relative', top: '-115px' }}><div id="adfox_167895933918077592"></div></div>
+          <div style={{ position: 'relative', top: '-110px' }}><div id="adfox_167895933918077592"></div></div>
           <div>
             <Banner />
             <SliderBanner />
@@ -99,7 +99,7 @@ export default function Main() {
             <Contacts />
             <Ensure />
           </div>
-          <div style={{ position: 'relative', top: '-115px' }}><div id="adfox_167896689561587795"></div></div>
+          <div style={{ position: 'relative', top: '-110px' }}><div id="adfox_167896689561587795"></div></div>
         </main>
         <Footer />
       </div>
