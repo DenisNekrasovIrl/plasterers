@@ -1,4 +1,4 @@
-import React, { FC, ReactElement, useLayoutEffect } from "react";
+import React, { FC, ReactElement, useEffect, useLayoutEffect, useState } from "react";
 import AdditionalBenefit from "../components/additional-benefit/AdditionalBenefit";
 import Advantages from "../components/advantages/Advantages";
 import Banner from "../components/banner/Banner";
@@ -21,8 +21,7 @@ import Reviews from "../components/reviews/Reviews";
 import Stages from "../components/stages/Stages";
 
 export default function Main() {
-
-
+  const [layout, setLayout] = useState('desctop');
   useLayoutEffect(() => {
     window.yaContextCb.push(() => {
       // eslint-disable-next-line no-undef
@@ -69,6 +68,7 @@ export default function Main() {
       })
     })
     if (document.documentElement.clientWidth >= 1280) {
+      setLayout('desctop')
       //   // desctop
       window.yaContextCb.push(() => {
         // eslint-disable-next-line no-undef
@@ -83,6 +83,7 @@ export default function Main() {
       })
     }
     if (document.documentElement.clientWidth < 1280 && document.documentElement.clientWidth >= 768) {
+      setLayout('tablet')
       // mobile - 640px
       window.yaContextCb.push(() => {
         // eslint-disable-next-line no-undef
@@ -97,6 +98,7 @@ export default function Main() {
       })
     }
     if (document.documentElement.clientWidth < 768 && document.documentElement.clientWidth >= 320) {
+      setLayout('mobile')
       window.yaContextCb.push(() => {
         // eslint-disable-next-line no-undef
         Ya.adfoxCode.create({
@@ -117,9 +119,9 @@ export default function Main() {
       </div>
       <div className="wrapper">
         <Header />
-        <div style={{ display: 'flex', justifyContent: 'center' }}><div id="adfox_167931708269983910"></div></div>
-        <div style={{ display: 'flex', justifyContent: 'center' }}><div id="adfox_16793172127941757"></div></div>
-        <div style={{ display: 'flex', justifyContent: 'center' }}><div id="adfox_167931750437195494"></div></div>
+        {layout === 'mobile' && <div style={{ display: 'flex', justifyContent: 'center' }}><div id="adfox_167931708269983910"></div></div>}
+        {layout === 'tablet' && <div style={{ display: 'flex', justifyContent: 'center' }}><div id="adfox_16793172127941757"></div></div>}
+        {layout === 'desctop' && <div style={{ display: 'flex', justifyContent: 'center' }}><div id="adfox_167931750437195494"></div></div>}
         <main className="page" style={{ display: 'flex', justifyContent: 'center' }}>
           <div style={{ position: 'relative', top: '-100px', right: '20px' }}><div id="adfox_167895933918077592"></div></div>
           <div>
