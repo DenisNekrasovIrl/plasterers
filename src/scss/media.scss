@@ -5,6 +5,7 @@
 }
 
 @media (max-width: 1440px) {
+
   .reviews .swiper-button-prev,
   .reviews .swiper-button-next {
     display: none;
@@ -69,27 +70,33 @@
     margin: 0 auto;
     transition: all 0.5s;
   }
+
   .menu__show {
     transform: translateY(-15%);
     background-color: gray;
     z-index: 2;
   }
+
   .menu__list {
     display: flex;
     flex-direction: column;
     margin-top: 25vh !important;
     margin-bottom: 50% !important;
   }
-  .menu__item + .menu__item {
+
+  .menu__item+.menu__item {
     margin-top: 50px !important;
   }
+
   .menu__list-link {
     color: #fff;
     font-size: 30px;
   }
+
   .header__phone {
     color: #fff;
   }
+
   .header__phone-box {
     display: none;
   }
@@ -151,6 +158,7 @@
     top: 100%;
     bottom: 70px;
   }
+
   .examples .swiper-button-prevv {
     left: 25%;
     top: 100%;
@@ -159,6 +167,7 @@
 }
 
 @media (max-width: 530px) {
+
   .banner__warranty,
   .banner__text {
     display: none;

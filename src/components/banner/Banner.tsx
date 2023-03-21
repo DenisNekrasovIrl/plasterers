@@ -6,7 +6,10 @@ const Banner: React.FC = function () {
   const [showModal, setShowModal] = useState<boolean>(false);
   const [showModalThanks, setShowModalThanks] = useState<boolean>(false);
   return (
-    <section className="banner">
+    <section className="banner" style={{
+      width: '1280px',
+      margin: 'auto'
+    }}>
       <div className="container">
         <div className="banner__body">
           <div className="banner__content">
@@ -35,7 +38,6 @@ const Banner: React.FC = function () {
               <div className="object__text">обектов оштукатурили с 2017 г</div>
             </div>
           </div>
-          <img src={bannerImg} alt="banner img" className="banner__img" />
         </div>
       </div>
       {showModal && (
