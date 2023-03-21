@@ -111,12 +111,21 @@ export default function Main() {
         })
       })
     }
+    window.yaContextCb.push(()=>{
+      // eslint-disable-next-line no-undef
+      Ya.adfoxCode.create({
+          ownerId: 1457688,
+          containerId: 'adfox_167938911405652106',
+          params: {
+              p1: 'cxrer',
+              p2: 'idqd'
+          }
+      })
+  })
   }, [])
   return (
     <>
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <div id="adfox_167895533089117900"></div>
-      </div>
+      <div style={{ display: 'flex', justifyContent: 'center' }}><div id="adfox_167895533089117900"></div></div>
       <div className="wrapper">
         <Header />
         {layout === 'mobile' && <div style={{ display: 'flex', justifyContent: 'center' }}><div id="adfox_167931708269983910"></div></div>}
@@ -126,7 +135,9 @@ export default function Main() {
           <div style={{ position: 'relative', top: '-100px', right: '20px' }}><div id="adfox_167895933918077592"></div></div>
           <div>
             <Banner />
+            
             <SliderBanner />
+            <div style={{ display: 'flex', justifyContent: 'center' }}><div id="adfox_167938911405652106"></div></div>
             <Advantages />
             <Benefit />
             <Calculation />
