@@ -37,7 +37,8 @@ export default function Advantages() {
         containerId: 'adfox_167963905326079200',
         params: {
           p1: 'cxpaf',
-          p2: 'idcr'
+          p2: 'idcr',
+          'id страны': 'Россия'
         }
       })
     })
