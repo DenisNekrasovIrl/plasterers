@@ -29,13 +29,27 @@ export default function Advantages() {
       })
     })
   }, [])
+  const clickup = function(e){
+    window.yaContextCb.push(() => {
+      // eslint-disable-next-line no-undef
+      Ya.adfoxCode.create({
+        ownerId: 1457688,
+        containerId: 'adfox_167963905326079200',
+        params: {
+          p1: 'cxpaf',
+          p2: 'idcr'
+        }
+      })
+    })
+    setCountry('')
+  }
   return (
     <section className="advantages">
       <div style={{
         display: 'flex',
         flexDirection: 'column'
       }}>
-        <input value={country} onChange={e => setCountry(e.target.value)} style={{
+        <input value={country} onChange={e => clickup(e.target.value)} style={{
           width: '100%'
         }} type="text" placeholder="Найти страну" />
         <button onClick={() => setCountry('')} style={{
