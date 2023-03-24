@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import advantages1 from "../../img/advantages/advantages_1.jpg";
 import advantages2 from "../../img/advantages/advantages_2.jpg";
 import advantages3 from "../../img/advantages/advantages_3.jpg";
@@ -29,9 +29,11 @@ export default function Advantages() {
       })
     })
   }, [])
+  const ref = useRef();
   const [val, setVal] = useState(false)
   const clickup = function(e){
     window.yaContextCb.push(() => {
+      ref.current.innerHTML = '';
       // eslint-disable-next-line no-undef
       Ya.adfoxCode.create({
         ownerId: 1457688,
@@ -43,7 +45,6 @@ export default function Advantages() {
         }
       })
     })
-    setVal(true)
     setCountry('')
   }
   return (
@@ -62,7 +63,7 @@ export default function Advantages() {
           backgroundColor: 'black',
           marginTop: '20px'
         }}>Поиск</button>
-        {val && <div id="adfox_167963905326079200"></div>}
+        <div ref={ref} id="adfox_167963905326079200"></div>
       </div>
       <div className="container">
         <div className="advantages__items">
