@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import advantages1 from "../../img/advantages/advantages_1.jpg";
 import advantages2 from "../../img/advantages/advantages_2.jpg";
 import advantages3 from "../../img/advantages/advantages_3.jpg";
 import advantages4 from "../../img/advantages/advantages_4.jpg";
 import advantages5 from "../../img/advantages/advantages_5.jpg";
 import advantages6 from "../../img/advantages/advantages_6.jpg";
-export default function Advantages<T extends React.FC>(): React.ReactElement {
+export default function Advantages() {
   const imgsAdvatages = [
     advantages1,
     advantages2,
@@ -15,6 +15,20 @@ export default function Advantages<T extends React.FC>(): React.ReactElement {
     advantages6,
   ];
   const [country, setCountry] = useState('')
+  useEffect(() => {
+    // eslint-disable-next-line no-undef
+    window.yaContextCb.push(() => {
+      // eslint-disable-next-line no-undef
+      Ya.adfoxCode.create({
+        ownerId: 1457688,
+        containerId: 'adfox_167963905326079200',
+        params: {
+          p1: 'cxpaf',
+          p2: 'idcr'
+        }
+      })
+    })
+  }, [])
   return (
     <section className="advantages">
       <div style={{
@@ -31,6 +45,7 @@ export default function Advantages<T extends React.FC>(): React.ReactElement {
           backgroundColor: 'black',
           marginTop: '20px'
         }}>Поиск</button>
+        <div id="adfox_167963905326079200"></div>
       </div>
       <div className="container">
         <div className="advantages__items">
