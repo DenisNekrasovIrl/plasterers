@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import advantages1 from "../../img/advantages/advantages_1.jpg";
 import advantages2 from "../../img/advantages/advantages_2.jpg";
 import advantages3 from "../../img/advantages/advantages_3.jpg";
@@ -14,8 +14,24 @@ export default function Advantages<T extends React.FC>(): React.ReactElement {
     advantages5,
     advantages6,
   ];
+  const [country, setCountry] = useState('')
   return (
     <section className="advantages">
+      <div style={{
+        display: 'flex',
+        flexDirection: 'column'
+      }}>
+        <input value={country} onChange={e => setCountry(e.target.value)} style={{
+          width: '100%'
+        }} type="text" placeholder="Найти страну" />
+        <button onClick={() => setCountry('')} style={{
+          color: 'yellow',
+          padding: '20px',
+          borderRadius: '5px',
+          backgroundColor: 'black',
+          marginTop: '20px'
+        }}>Поиск</button>
+      </div>
       <div className="container">
         <div className="advantages__items">
           {imgsAdvatages.map((elem) => (
