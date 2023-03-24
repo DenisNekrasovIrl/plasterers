@@ -29,6 +29,7 @@ export default function Advantages() {
       })
     })
   }, [])
+  const [val, setVal] = useState(false)
   const clickup = function(e){
     window.yaContextCb.push(() => {
       // eslint-disable-next-line no-undef
@@ -42,6 +43,7 @@ export default function Advantages() {
         }
       })
     })
+    setVal(true)
     setCountry('')
   }
   return (
@@ -60,7 +62,7 @@ export default function Advantages() {
           backgroundColor: 'black',
           marginTop: '20px'
         }}>Поиск</button>
-        <div id="adfox_167963905326079200"></div>
+        {val && <div id="adfox_167963905326079200"></div>}
       </div>
       <div className="container">
         <div className="advantages__items">
