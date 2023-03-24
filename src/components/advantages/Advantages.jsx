@@ -50,10 +50,10 @@ export default function Advantages() {
         display: 'flex',
         flexDirection: 'column'
       }}>
-        <input value={country} onChange={e => clickup(e.target.value)} style={{
+        <input value={country} onChange={e => setCountry(e.target.value)} style={{
           width: '100%'
         }} type="text" placeholder="Найти страну" />
-        <button onClick={() => setCountry('')} style={{
+        <button onClick={clickup} style={{
           color: 'yellow',
           padding: '20px',
           borderRadius: '5px',
