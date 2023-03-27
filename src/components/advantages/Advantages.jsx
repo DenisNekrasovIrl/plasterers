@@ -14,56 +14,75 @@ export default function Advantages() {
     advantages5,
     advantages6,
   ];
-  const [country, setCountry] = useState('')
+  const [country, setCountry] = useState("");
   useEffect(() => {
     // eslint-disable-next-line no-undef
     window.yaContextCb.push(() => {
       // eslint-disable-next-line no-undef
       Ya.adfoxCode.create({
         ownerId: 1457688,
-        containerId: 'adfox_167963905326079200',
+        containerId: "adfox_167963905326079200",
         params: {
-          p1: 'cxpaf',
-          p2: 'idcr'
-        }
-      })
-    })
-  }, [])
+          p1: "cxpaf",
+          p2: "idcr",
+        },
+      });
+    });
+  }, []);
   const ref = useRef();
-  const [val, setVal] = useState(false)
-  const clickup = function(e){
-    window.yaContextCb.push(() => {
-      ref.current.innerHTML = '';
-      // eslint-disable-next-line no-undef
-      Ya.adfoxCode.create({
-        ownerId: 1457688,
-        containerId: 'adfox_167963905326079200',
-        params: {
-          p1: 'cxpaf',
-          p2: 'idcr',
-          'id страны': 'Россия'
-        }
-      })
-    })
-    setCountry('')
-  }
+  const [val, setVal] = useState(false);
+  const clickup = function (e) {
+    ref.current.innerHTML = "";
+    if (
+      country === "Россия" ||
+      country === "Казахстан" ||
+      country === "Украина"
+    ) {
+      window.yaContextCb.push(() => {
+        // eslint-disable-next-line no-undef
+        Ya.adfoxCode.create({
+          ownerId: 1457688,
+          containerId: "adfox_167991223804329403",
+          params: {
+            p1: "cxpaf",
+            p2: "idcr",
+            puid1:
+              country === "Россия" ? 150 : country === "Казахстан" ? 53 : 121,
+          },
+        });
+      });
+    }
+  };
   return (
     <section className="advantages">
-      <div style={{
-        display: 'flex',
-        flexDirection: 'column'
-      }}>
-        <input value={country} onChange={e => setCountry(e.target.value)} style={{
-          width: '100%'
-        }} type="text" placeholder="Найти страну" />
-        <button onClick={clickup} style={{
-          color: 'yellow',
-          padding: '20px',
-          borderRadius: '5px',
-          backgroundColor: 'black',
-          marginTop: '20px'
-        }}>Поиск</button>
-        <div ref={ref} id="adfox_167963905326079200"></div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
+        <input
+          value={country}
+          onChange={(e) => setCountry(e.target.value)}
+          style={{
+            width: "100%",
+          }}
+          type="text"
+          placeholder="Найти страну"
+        />
+        <button
+          onClick={clickup}
+          style={{
+            color: "yellow",
+            padding: "20px",
+            borderRadius: "5px",
+            backgroundColor: "black",
+            marginTop: "20px",
+          }}
+        >
+          Поиск
+        </button>
+        <div ref={ref} id="adfox_167991223804329403"></div>
       </div>
       <div className="container">
         <div className="advantages__items">
