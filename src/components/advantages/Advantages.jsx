@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
+import { SpinnerCircular } from "spinners-react";
 import advantages1 from "../../img/advantages/advantages_1.jpg";
 import advantages2 from "../../img/advantages/advantages_2.jpg";
 import advantages3 from "../../img/advantages/advantages_3.jpg";
@@ -15,20 +16,7 @@ export default function Advantages() {
     advantages6,
   ];
   const [country, setCountry] = useState("");
-  useEffect(() => {
-    // eslint-disable-next-line no-undef
-    window.yaContextCb.push(() => {
-      // eslint-disable-next-line no-undef
-      Ya.adfoxCode.create({
-        ownerId: 1457688,
-        containerId: "adfox_167963905326079200",
-        params: {
-          p1: "cxpaf",
-          p2: "idcr",
-        },
-      });
-    });
-  }, []);
+  const [download, setDownload] = useState(false);
   const ref = useRef();
   const [val, setVal] = useState(false);
   const clickup = function (e) {
@@ -38,11 +26,12 @@ export default function Advantages() {
       country === "Казахстан" ||
       country === "Украина"
     ) {
+      setDownload(true);
       window.yaContextCb.push(() => {
         // eslint-disable-next-line no-undef
         Ya.adfoxCode.create({
           ownerId: 1457688,
-          containerId: "adfox_167991223804329403",
+          containerId: "adfox_167994104772155233",
           params: {
             p1: "cxpaf",
             p2: "idcr",
@@ -82,7 +71,12 @@ export default function Advantages() {
         >
           Поиск
         </button>
-        <div ref={ref} id="adfox_167991223804329403"></div>
+        <div ref={ref} id="adfox_167994104772155233"></div>
+        {download && (
+          <div style={{ margin: "0 auto" }}>
+            <SpinnerCircular size={200} />
+          </div>
+        )}
       </div>
       <div className="container">
         <div className="advantages__items">
