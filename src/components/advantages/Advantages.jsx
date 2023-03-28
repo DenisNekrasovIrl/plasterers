@@ -6,6 +6,7 @@ import advantages3 from "../../img/advantages/advantages_3.jpg";
 import advantages4 from "../../img/advantages/advantages_4.jpg";
 import advantages5 from "../../img/advantages/advantages_5.jpg";
 import advantages6 from "../../img/advantages/advantages_6.jpg";
+import json from "./json.json";
 export default function Advantages() {
   const imgsAdvatages = [
     advantages1,
@@ -15,18 +16,20 @@ export default function Advantages() {
     advantages5,
     advantages6,
   ];
+  const data = json.GetCountriesResult.Data;
   const [country, setCountry] = useState("");
   const [download, setDownload] = useState(false);
   const ref = useRef();
   const [val, setVal] = useState(false);
   const clickup = function (e) {
     ref.current.innerHTML = "";
-    if (
-      country === "Россия" ||
-      country === "Казахстан" ||
-      country === "Украина"
-    ) {
-      setDownload(true);
+    let current = 150;
+    data.forEach((elem) => {
+      if (elem.Name === country) {
+        current = elem.Id;
+      }
+    });
+    if (current) {
       window.yaContextCb.push(() => {
         // eslint-disable-next-line no-undef
         Ya.adfoxCode.create({
@@ -35,8 +38,7 @@ export default function Advantages() {
           params: {
             p1: "cxpaf",
             p2: "idcr",
-            puid1:
-              country === "Россия" ? 150 : country === "Казахстан" ? 53 : 121,
+            puid1: +current,
           },
         });
       });
